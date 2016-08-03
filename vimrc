@@ -50,6 +50,7 @@ set t_Co=256
 let g:ycm_register_as_syntastic_checker = 0
 
 " syntastics
+" for python flake8 should be installed: pip install flake8
 let g:syntastic_cpp_compiler = "g++"
 let g:syntastic_check_on_w = 1
 let g:syntastic_enable_signs = 1
