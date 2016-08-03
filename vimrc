@@ -1,0 +1,151 @@
+" vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-commentary'
+Plugin 'klen/python-mode'
+Plugin 'bling/vim-airline'
+Plugin 'mrtazz/DoxygenToolkit.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'rizzatti/dash.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'shumphrey/fugitive-gitlab.vim'
+call vundle#end()
+filetype plugin indent on
+
+" colorscheme
+colorscheme Tomorrow-Night-Eighties
+
+" search hightlifht
+set hlsearch
+nnoremap <silent> <C-i> :nohl<CR><C-i>
+
+" set ctags
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <C-w>\ :vsp <CR>:exec("tag ".expand("<cword>"))<CR> 
+map <f12> :!ctags -R .<CR>
+
+" reformat file
+map <F7> mzgg=G`z<CR>
+
+" taglist
+nnoremap <silent> <F8> :TlistToggle<CR>
+let Tlist_File_Fold_Auto_Close = 1
+
+" move between windows
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
+" air line
+let g:airline_theme = 'dark'
+set laststatus=2
+set t_Co=256
+
+" ycm
+let g:ycm_register_as_syntastic_checker = 0
+
+" syntastics
+let g:syntastic_cpp_compiler = "g++"
+let g:syntastic_check_on_w = 1
+let g:syntastic_enable_signs = 1
+let g:syntastic_ignore_files = ['\.py$']
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 4
+let g:syntastic_cpp_remove_include_errors = 1
+
+" Python-mode
+" K             Show python docs
+" <Ctrl-Space>  Rope autocomplete
+" <Ctrl-c>g     Rope goto definition
+" <Ctrl-c>d     Rope show documentation
+" <Ctrl-c>f     Rope find occurrences
+" <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
+" [[            Jump on previous class or function (normal, visual, operator modes)
+" ]]            Jump on next class or function (normal, visual, operator modes)
+" [M            Jump on previous class or method (normal, visual, operator modes)
+" ]M            Jump on next class or method (normal, visual, operator modes)
+let g:pymode_rope = 0
+" Documentation
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+"Linting
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes, pep8"
+" Auto check on save
+let g:pymode_lint_write = 1
+" Support virtualenv
+let g:pymode_virtualenv = 1
+" Enable breakpoints plugin
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_key = '<leader>b'
+" syntax highlighting
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+" Don't autofold code
+let g:pymode_folding = 0
+" Don't auto select first candidate
+let g:jedi#popup_on_dot=0
+" Don't popup pydoc
+autocmd FileType python setlocal completeopt-=preview
+
+" doxygentoolkit
+let g:DoxygenToolkit_fileTag = "@file "
+let g:DoxygenToolkit_briefTag_pre = "@brief "
+let g:DoxygenToolkit_paramTag_pre = "@param "
+let g:DoxygenToolkit_returnTag = "@returns "
+let g:DoxygenToolkit_versionTag = "@version "
+let g:DoxygenToolkit_authorTag = "@author "
+let g:DoxygenToolkit_dateTag = "@date "
+let g:DoxygenToolkit_authorName = "Wang Jiajun <wangjiajun.phy@gmail.com>"
+let g:doxygen_enhanced_color = 1 
+
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+let g:lasttab = 1
+nmap <Leader>l :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
+
+" nerdcommenter
+let NERDSpaceDelims=1
+
+" ultisnips
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" Paste without indentation
+set pastetoggle=<F10>
+
+" git
+let g:fugitive_gitlab_domains = ['https://git.xiaojukeji.com']
+
+syntax on
+set backspace=2
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set cindent
+set nu
+set clipboard=unnamed
