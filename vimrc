@@ -36,10 +36,6 @@ map <f12> :!ctags -R .<CR>
 " reformat file
 map <F7> mzgg=G`z<CR>
 
-" taglist
-nnoremap <silent> <F8> :TlistToggle<CR>
-let Tlist_File_Fold_Auto_Close = 1
-
 " move between windows
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
