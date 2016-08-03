@@ -9,7 +9,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-commentary'
-Plugin 'klen/python-mode'
 Plugin 'bling/vim-airline'
 Plugin 'mrtazz/DoxygenToolkit.vim'
 Plugin 'SirVer/ultisnips'
@@ -54,37 +53,9 @@ let g:ycm_register_as_syntastic_checker = 0
 let g:syntastic_cpp_compiler = "g++"
 let g:syntastic_check_on_w = 1
 let g:syntastic_enable_signs = 1
-let g:syntastic_ignore_files = ['\.py$']
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 4
 let g:syntastic_cpp_remove_include_errors = 1
-
-" Python-mode
-let g:pymode_rope = 0
-" Documentation
-let g:pymode_doc = 1
-let g:pymode_doc_key = 'K'
-"Linting
-let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes, pep8"
-" Auto check on save
-let g:pymode_lint_write = 1
-" Support virtualenv
-let g:pymode_virtualenv = 1
-" Enable breakpoints plugin
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_key = '<leader>b'
-" syntax highlighting
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
-" Don't autofold code
-let g:pymode_folding = 0
-" Don't auto select first candidate
-let g:jedi#popup_on_dot=0
-" Don't popup pydoc
-autocmd FileType python setlocal completeopt-=preview
 
 " doxygentoolkit
 let g:DoxygenToolkit_fileTag = "@file "
