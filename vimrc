@@ -84,9 +84,6 @@ let g:lasttab = 1
 nmap <Leader>l :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
-" nerdcommenter
-let NERDSpaceDelims=1
-
 " ultisnips
 let g:UltiSnipsExpandTrigger       = "<c-l>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
