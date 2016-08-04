@@ -51,23 +51,23 @@ let g:ycm_register_as_syntastic_checker = 0
 
 " syntastics
 " for python flake8 should be installed: pip install flake8
-let g:syntastic_cpp_compiler = "g++"
-let g:syntastic_check_on_w = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_loc_list_height = 4
+let g:syntastic_cpp_compiler              = "g++"
+let g:syntastic_check_on_w                = 1
+let g:syntastic_enable_signs              = 1
+let g:syntastic_auto_loc_list             = 1
+let g:syntastic_loc_list_height           = 4
 let g:syntastic_cpp_remove_include_errors = 1
 
 " doxygentoolkit
-let g:DoxygenToolkit_fileTag = "@file "
+let g:DoxygenToolkit_fileTag      = "@file "
 let g:DoxygenToolkit_briefTag_pre = "@brief "
 let g:DoxygenToolkit_paramTag_pre = "@param "
-let g:DoxygenToolkit_returnTag = "@returns "
-let g:DoxygenToolkit_versionTag = "@version "
-let g:DoxygenToolkit_authorTag = "@author "
-let g:DoxygenToolkit_dateTag = "@date "
-let g:DoxygenToolkit_authorName = "Wang Jiajun <wangjiajun.phy@gmail.com>"
-let g:doxygen_enhanced_color = 1 
+let g:DoxygenToolkit_returnTag    = "@returns "
+let g:DoxygenToolkit_versionTag   = "@version "
+let g:DoxygenToolkit_authorTag    = "@author "
+let g:DoxygenToolkit_dateTag      = "@date "
+let g:DoxygenToolkit_authorName   = "Wang Jiajun <wangjiajun.phy@gmail.com>"
+let g:doxygen_enhanced_color      = 1
 
 " Go to tab by number
 noremap <leader>1 1gt
@@ -88,9 +88,9 @@ au TabLeave * let g:lasttab = tabpagenr()
 let NERDSpaceDelims=1
 
 " ultisnips
-let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsExpandTrigger       = "<c-l>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
 " Paste without indentation
 set pastetoggle=<F10>
