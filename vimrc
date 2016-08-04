@@ -69,7 +69,7 @@ let g:DoxygenToolkit_dateTag      = "@date "
 let g:DoxygenToolkit_authorName   = "Wang Jiajun <wangjiajun.phy@gmail.com>"
 let g:doxygen_enhanced_color      = 1
 
-" Go to tab by number
+" go to tab by number
 noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
@@ -89,17 +89,16 @@ let g:UltiSnipsExpandTrigger       = "<c-l>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
-" Paste without indentation
+" paste without indentation
 set pastetoggle=<F10>
 
 " git
 let g:fugitive_gitlab_domains = ['https://git.xiaojukeji.com']
 
 " easy align
-" Start interactive EasyAlign in visual mode (e.g. vipga)
+" start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
-
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+" start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
 syntax on
