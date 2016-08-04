@@ -16,6 +16,7 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'shumphrey/fugitive-gitlab.vim'
+Plugin 'junegunn/vim-easy-align'
 call vundle#end()
 filetype plugin indent on
 
@@ -96,6 +97,13 @@ set pastetoggle=<F10>
 
 " git
 let g:fugitive_gitlab_domains = ['https://git.xiaojukeji.com']
+
+" easy align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 syntax on
 set backspace=2
