@@ -17,6 +17,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
 call vundle#end()
 filetype plugin indent on
 
@@ -97,6 +98,11 @@ set pastetoggle=<F10>
 
 " git
 let g:fugitive_gitlab_domains = ['https://git.xiaojukeji.com']
+
+" spell check
+nmap <silent> <leader>s :set spell!<CR>
+" latex-box
+let g:LatexBox_quickfix=4
 
 " easy align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
