@@ -23,7 +23,7 @@ filetype plugin indent on
 " colorscheme
 colorscheme Tomorrow-Night-Eighties
 
-" search hightlifht
+" search highlight
 set hlsearch
 nnoremap <silent> <C-i> :nohl<CR><C-i>
 
