@@ -17,6 +17,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
 
@@ -29,7 +30,7 @@ nnoremap <silent> <C-i> :nohl<CR><C-i>
 
 " set ctags
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <C-w>\ :vsp <CR>:exec("tag ".expand("<cword>"))<CR> 
+map <C-w>\ :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 map <f12> :!ctags -R .<CR>
 
 " reformat file
@@ -100,6 +101,9 @@ let g:fugitive_gitlab_domains = ['https://git.xiaojukeji.com']
 xmap ga <Plug>(EasyAlign)
 " start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" nerdtree
+map <F5> :NERDTreeToggle<CR>
 
 syntax on
 set backspace=2
