@@ -115,3 +115,7 @@ set smartindent
 set cindent
 set nu
 set clipboard=unnamed
+
+" for hive script
+filetype plugin on
+au BufNewFile,BufRead *.hive set filetype=sh.hive expandtab
