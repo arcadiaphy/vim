@@ -18,6 +18,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jiangmiao/auto-pairs'
 call vundle#end()
 filetype plugin indent on
 
