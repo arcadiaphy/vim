@@ -324,4 +324,4 @@ iab before BEFORE
 iab after AFTER
 iab all ALL
 
-let b:current_syntax = "sql"
+let b:current_syntax = "shsql"
