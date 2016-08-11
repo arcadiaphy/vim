@@ -92,7 +92,7 @@ let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
 " paste without indentation
-set pastetoggle=<F10>
+set pastetoggle=<C-y>
 
 " git
 let g:fugitive_gitlab_domains = ['https://git.xiaojukeji.com']
