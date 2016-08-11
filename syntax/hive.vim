@@ -17,12 +17,9 @@ function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
   else
     unlet b:current_syntax
   endif
-  execute 'syntax region textSnip'.ft.'
-  \ matchgroup='.a:textSnipHl.'
-  \ start="'.a:start.'" end="'.a:end.'"
-  \ contains=@'.group
+  execute 'syntax region textSnip'.ft.' matchgroup='.a:textSnipHl.' start="'.a:start.'" end="'.a:end.'" contains=@'.group
 endfunction
 
 set filetype=sh
-call TextEnableCodeSnip('shsql',   'hive -e \"',   '\"', 'SpecialComment' )
-let b:current_syntax = "hive"
+call TextEnableCodeSnip('shsql',   '^hive -e \"$',   '^\"$', 'SpecialComment' )
+let b:current_syntax = 'hive'

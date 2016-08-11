@@ -1,5 +1,4 @@
 set filetype=sh
-
 syn case ignore
 
 " All non-contained SQL syntax.
@@ -69,7 +68,7 @@ syn match   sqlOperator     "||\|:="
 syn match   sqlFunction     "\<\(abs\|acos\|asin\|atan2\?\|avg\|cardinality\)(\@="
 syn match   sqlFunction     "\<\(cast\|changes\|char_length\|character_length\)(\@="
 syn match   sqlFunction     "\<\(coalesce\|cos\|count\|\(date\)\?\(time\)\?\)(\@="
-syn match   sqlFunction     "\<\(exp\|filetoblob\|filetoclob\|glob\|group_concat\)(\@="
+syn match   sqlFunction     "\<\(exp\|filetoblob\|filetoclob\|glob\|concat\|group_concat\)(\@="
 syn match   sqlFunction     "\<\(hex\|ifnull\|initcap\|isnull\|julianday\|last_insert_rowid\)(\@="
 syn match   sqlFunction     "\<\(length\|log10\|logn\|lower\|lpad\|ltrin\|max\|min\)(\@="
 syn match   sqlFunction     "\<\(mod\|nullif\|octet_length\|pow\|quote\|random\)(\@="
