@@ -118,4 +118,4 @@ set clipboard=unnamed
 
 " for hive script
 filetype plugin on
-au BufNewFile,BufRead *.hive set filetype=sh.hive expandtab
+au BufNewFile,BufRead *.hive set filetype=hive expandtab

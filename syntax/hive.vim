@@ -1,101 +1,28 @@
-iab begin BEGIN
-iab declare DECLARE
-iab end END
-iab if IF
-iab select SELECT
-iab from FROM
-iab when WHEN
-iab then THEN
-iab loop LOOP
-iab while WHILE
-iab update UPDATE
-iab delete DELETE
-iab insert INSERT
-iab values VALUES
-iab long LONG
-iab rownum ROWNUM
-iab where WHERE
-iab type TYPE
-iab rowtype ROWTYPE
-iab for FOR
-iab else ELSE
-iab to_char TO_CHAR
-iab sysdate SYSDATE
-iab varchar2 VARCHAR2
-iab char CHAR
-iab number NUMBER
-iab boolean BOOLEAN
-iab dual DUAL
-iab rowidtochar ROWIDTOCHAR
-iab variable VARIABLE
-iab null NULL
-iab date DATE
-iab default DEFAULT
-iab not NOT
-iab others OTHERS
-iab in IN
-iab is IS
-iab elsif ELSIF
-iab procedure PROCEDURE
-iab function FUNCTION
-iab integer INTEGER
-iab and AND
-iab or OR
-iab intersect INTERSECT
-iab minus MINUS
-iab union UNION
-iab record RECORD
-iab exit EXIT
-iab raise RAISE
-iab open OPEN
-iab isopen ISOPEN
-iab fetch FETCH
-iab close CLOSE
-iab notfound NOTFOUND
-iab into INTO
-iab found FOUND
-iab rowcount ROWCOUNT
-iab count COUNT
-iab enable ENABLE
-iab ref REF
-iab return RETURN
-iab by BY
-iab index INDEX
-iab binary BINARY
-iab table TABLE
-iab of OF
-iab as AS
-iab join JOIN
-iab concat CONCAT
-iab binary_integer BINARY_INTEGER
-iab add_months ADD_MONTHS
-iab last_day LAST_DAY
-iab round ROUND
-iab trunc TRUNC
-iab months_between MONTHS_BETWEEN
-iab out OUT
-iab commit COMMIT
-iab replace REPLACE
-iab create CREATE
-iab having HAVING
-iab group GROUP
-iab order ORDER
-iab decode DECODE
-iab substr SUBSTR
-iab lpad LPAD
-iab like LIKE
-iab ceil CEIL
-iab ltrim LTRIM
-iab rtrim RTRIM
-iab max MAX
-iab min MIN
-iab avg AVG
-iab sum SUM
-iab on ON
-iab trigger TRIGGER
-iab each EACH
-iab row ROW
-iab new NEW
-iab before BEFORE
-iab after AFTER
-iab all ALL
+function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
+  let ft=toupper(a:filetype)
+  let group='textGroup'.ft
+  if exists('b:current_syntax')
+    let s:current_syntax=b:current_syntax
+    " Remove current syntax definition, as some syntax files (e.g. cpp.vim)
+    " do nothing if b:current_syntax is defined.
+    unlet b:current_syntax
+  endif
+  execute 'syntax include @'.group.' syntax/'.a:filetype.'.vim'
+  try
+    execute 'syntax include @'.group.' after/syntax/'.a:filetype.'.vim'
+  catch
+  endtry
+  if exists('s:current_syntax')
+    let b:current_syntax=s:current_syntax
+  else
+    unlet b:current_syntax
+  endif
+  execute 'syntax region textSnip'.ft.'
+  \ matchgroup='.a:textSnipHl.'
+  \ start="'.a:start.'" end="'.a:end.'"
+  \ contains=@'.group
+endfunction
+
+set filetype=sh
+call TextEnableCodeSnip('shsql',   'hive -e \"',   '\"', 'SpecialComment' )
+let b:current_syntax = "hive"
