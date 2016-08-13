@@ -1,4 +1,12 @@
-set filetype=sh
+" Based on https://github.com/vim-scripts/sql.vim--Stinson
+
+if version < 600
+  syntax clear
+elseif exists("b:current_syntax")
+  finish
+endif
+
+set syntax=sh
 syn case ignore
 
 " All non-contained SQL syntax.

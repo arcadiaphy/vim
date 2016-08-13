@@ -1,3 +1,9 @@
+if version < 600
+  syntax clear
+elseif exists("b:current_syntax")
+  finish
+endif
+
 function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
   let ft=toupper(a:filetype)
   let group='textGroup'.ft
@@ -20,6 +26,6 @@ function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
   execute 'syntax region textSnip'.ft.' matchgroup='.a:textSnipHl.' start="'.a:start.'" end="'.a:end.'" contains=@'.group
 endfunction
 
-set filetype=sh
+set syntax=sh
 call TextEnableCodeSnip('shsql',   '^hive -e \"$',   '^\"$', 'SpecialComment' )
 let b:current_syntax = 'hive'
