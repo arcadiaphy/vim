@@ -6,7 +6,9 @@ elseif exists("b:current_syntax")
   finish
 endif
 
-set syntax=sh
+runtime! syntax/sh.vim
+unlet b:current_syntax
+
 syn case ignore
 
 " All non-contained SQL syntax.
