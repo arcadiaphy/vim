@@ -105,6 +105,14 @@ nmap ga <Plug>(EasyAlign)
 " nerdtree
 map <F5> :NERDTreeToggle<CR>
 
+" for hive script
+filetype plugin on
+au BufNewFile,BufRead *.hive set filetype=hive expandtab
+
+" ultisnippets
+let g:UltiSnipsEditSplit   = 'vertical'
+let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+
 syntax on
 set backspace=2
 set tabstop=4
@@ -114,7 +122,3 @@ set smartindent
 set cindent
 set nu
 set clipboard=unnamed
-
-" for hive script
-filetype plugin on
-au BufNewFile,BufRead *.hive set filetype=hive expandtab
