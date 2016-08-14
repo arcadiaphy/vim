@@ -9,8 +9,6 @@ function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
   let group='textGroup'.ft
   if exists('b:current_syntax')
     let s:current_syntax=b:current_syntax
-    " Remove current syntax definition, as some syntax files (e.g. cpp.vim)
-    " do nothing if b:current_syntax is defined.
     unlet b:current_syntax
   endif
   execute 'syntax include @'.group.' syntax/'.a:filetype.'.vim'
@@ -23,5 +21,5 @@ function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
 endfunction
 
 set syntax=sh
-call TextEnableCodeSnip('shsql',   '^hive -e \"$',   '^\"$', 'SpecialComment' )
+call TextEnableCodeSnip('shsql',   '^hive -e \"$',   '^\"$', 'SpecialComment')
 let b:current_syntax = 'hive'
