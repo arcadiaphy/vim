@@ -17,7 +17,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'scrooloose/nerdtree'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'Raimondi/delimitMate'
 call vundle#end()
 filetype plugin indent on
 
@@ -112,6 +112,10 @@ au BufNewFile,BufRead *.hive set filetype=hive expandtab
 " ultisnippets
 let g:UltiSnipsEditSplit   = 'vertical'
 let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+
+" delimitmate
+let delimitMate_expand_space = 1
+let delimitMate_expand_cr    = 1
 
 syntax on
 set backspace=2
