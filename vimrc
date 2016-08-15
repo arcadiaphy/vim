@@ -18,6 +18,7 @@ Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-surround'
 call vundle#end()
 filetype plugin indent on
 
