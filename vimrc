@@ -108,7 +108,7 @@ map <F5> :NERDTreeToggle<CR>
 
 " for hive script
 filetype plugin on
-au BufNewFile,BufRead *.hive set filetype=hive expandtab
+au BufNewFile,BufRead *.hive set filetype=hive
 
 " ultisnippets
 let g:UltiSnipsEditSplit   = 'vertical'
@@ -124,6 +124,5 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set cindent
 set nu
 set clipboard=unnamed
