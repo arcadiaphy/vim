@@ -119,6 +119,7 @@ let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 let delimitMate_expand_space = 1
 let delimitMate_expand_cr    = 1
 
+" vimwiki
 let wiki = {}
 let wiki.path = '~/vimwiki/'
 let wiki.nested_syntaxes = {'python': 'python', 'cpp': 'cpp'}
