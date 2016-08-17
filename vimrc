@@ -19,6 +19,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
+Plugin 'vimwiki/vimwiki'
 call vundle#end()
 filetype plugin indent on
 
@@ -117,6 +118,15 @@ let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 " delimitmate
 let delimitMate_expand_space = 1
 let delimitMate_expand_cr    = 1
+
+let wiki = {}
+let wiki.path = '~/vimwiki/'
+let wiki.nested_syntaxes = {'python': 'python', 'cpp': 'cpp'}
+let wiki.template_path = '~/.vim/template'
+let wiki.template_default = 'default'
+let wiki.css_name = 'github.css'
+let g:vimwiki_list = [wiki]
+nmap <leader>wc :VimwikiAll2HTML<CR>
 
 syntax on
 set backspace=2
