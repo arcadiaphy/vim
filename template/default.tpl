@@ -6,11 +6,13 @@
 <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCore.css" />
 <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shThemeDefault.css" />
 <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPlain.js"></script>
 <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushCpp.js"></script>
 <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPython.js"></script>
 <script type="text/javascript">
-  SyntaxHighlighter.defaults.toolbar = false;
-  SyntaxHighlighter.defaults.gutter = false;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.defaults['gutter'] = false;
+  SyntaxHighlighter.defaults['auto-links'] = false;
   SyntaxHighlighter.all();
 </script>
 <title>%title%</title>
