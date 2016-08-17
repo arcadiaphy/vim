@@ -1,0 +1,17 @@
+snippet "(.*)\[([^\]]*)\]\(([^\)]*)\)" "change markdown link" rb
+`!p snip.rv = match.group(1) + '[[' + match.group(3) + '|' + match.group(2) + ']]'`
+endsnippet
+
+snippet "h(\w+)" "code highlight" rb
+{{{class="brush:`!p snip.rv = match.group(1)`"
+$1
+}}}
+endsnippet
+
+snippet link
+[[${1:link}|${2:alt}]]
+endsnippet
+
+snippet image
+{{${1:path}|${2:alt}|style="${3:width:90%}"}}
+endsnippet
