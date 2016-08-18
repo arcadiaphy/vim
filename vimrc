@@ -121,9 +121,9 @@ let delimitMate_expand_cr    = 1
 
 " vimwiki
 let wiki = {}
-let wiki.path = '~/vimwiki/'
+let wiki.path = '~/.vim/vimwiki/wiki'
 let wiki.nested_syntaxes = {'python': 'python', 'cpp': 'cpp'}
-let wiki.template_path = '~/.vim/template'
+let wiki.template_path = '~/.vim/vimwiki/template'
 let wiki.template_default = 'default'
 let wiki.css_name = 'github.css'
 let g:vimwiki_list = [wiki]
