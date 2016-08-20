@@ -127,7 +127,7 @@ let wiki.template_path = '~/.vim/vimwiki/template'
 let wiki.template_default = 'default'
 let wiki.css_name = 'github.css'
 let g:vimwiki_list = [wiki]
-nmap <leader>wc :VimwikiAll2HTML<CR>
+nnoremap <leader>wc :VimwikiAll2HTML<CR>
 
 " show invisible character
 nnoremap <silent> <leader>l :set list!<CR>
@@ -135,6 +135,21 @@ set listchars=tab:▸\ ,eol:¬
 
 " tab width
 autocmd FileType cpp set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+" preserve state function
+function! Preserve(command)
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    execute a:command
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+nnoremap <leader>t :call Preserve("%s/\\s\\+$//e")<CR>
+nnoremap <leader>= :call Preserve("normal gg=G")<CR>
 
 syntax on
 set backspace=2
