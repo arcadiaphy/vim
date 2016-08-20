@@ -157,6 +157,10 @@ nnoremap <leader>= :call Preserve("normal gg=G")<CR>
 " select all
 nnoremap <leader>a ggVG
 
+" quickly edit and apply vimrc
+nnoremap <leader>ve :edit ~/.vim/vimrc<CR>
+nnoremap <leader>va :let @/=""<CR>:w<CR>:source %<CR>
+
 syntax on
 set backspace=2
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
