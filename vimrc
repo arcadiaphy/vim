@@ -129,6 +129,10 @@ let wiki.css_name = 'github.css'
 let g:vimwiki_list = [wiki]
 nmap <leader>wc :VimwikiAll2HTML<CR>
 
+" show invisible character
+nnoremap <silent> <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
 syntax on
 set backspace=2
 set tabstop=4
