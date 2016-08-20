@@ -154,6 +154,9 @@ endfunction
 nnoremap <leader>t :call Preserve("%s/\\s\\+$//e")<CR>
 nnoremap <leader>= :call Preserve("normal gg=G")<CR>
 
+" select all
+nnoremap <leader>a ggVG
+
 syntax on
 set backspace=2
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
