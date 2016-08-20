@@ -109,7 +109,7 @@ map <F5> :NERDTreeToggle<CR>
 
 " for hive script
 filetype plugin on
-au BufNewFile,BufRead *.hive set filetype=hive
+autocmd BufNewFile,BufRead *.hive set filetype=hive
 
 " ultisnippets
 let g:UltiSnipsEditSplit   = 'vertical'
@@ -133,11 +133,12 @@ nmap <leader>wc :VimwikiAll2HTML<CR>
 nnoremap <silent> <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
+" tab width
+autocmd FileType cpp set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
 syntax on
 set backspace=2
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set smartindent
-set nu
+set number
 set clipboard=unnamed
