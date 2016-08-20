@@ -23,6 +23,9 @@ Plugin 'vimwiki/vimwiki'
 call vundle#end()
 filetype plugin indent on
 
+" more convenient to reach leader key
+let mapleader = ","
+
 " colorscheme
 colorscheme Tomorrow-Night-Eighties
 
