@@ -167,3 +167,4 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set smartindent
 set number
 set clipboard=unnamed
+set mouse=a
