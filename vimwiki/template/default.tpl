@@ -13,6 +13,7 @@
   SyntaxHighlighter.defaults['toolbar'] = false;
   SyntaxHighlighter.defaults['gutter'] = false;
   SyntaxHighlighter.defaults['auto-links'] = false;
+  SyntaxHighlighter.defaults['quick-code'] = false;
   SyntaxHighlighter.all();
 </script>
 <title>%title%</title>
