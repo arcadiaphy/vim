@@ -31,7 +31,7 @@ colorscheme Tomorrow-Night-Eighties
 
 " search highlight
 set hlsearch
-nnoremap <silent> <C-i> :nohl<CR><C-i>
+nnoremap <silent> <leader>i :nohl<CR>
 
 " set ctags
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
