@@ -125,7 +125,7 @@ let delimitMate_expand_cr    = 1
 " vimwiki
 let wiki = {}
 let wiki.path = '~/.vim/vimwiki/wiki'
-let wiki.nested_syntaxes = {'python': 'python', 'cpp': 'cpp'}
+let wiki.nested_syntaxes = {'python': 'python', 'cpp': 'cpp', 'plain': 'plain'}
 let wiki.template_path = '~/.vim/vimwiki/template'
 let wiki.template_default = 'default'
 let wiki.css_name = 'github.css'
@@ -159,7 +159,7 @@ nnoremap <leader>a ggVG
 
 " quickly edit and apply vimrc
 nnoremap <leader>ve :edit ~/.vim/vimrc<CR>
-nnoremap <leader>va :let @/=""<CR>:w<CR>:source %<CR>
+nnoremap <leader>va :let @/=""<CR>:w<CR>:source ~/.vimrc<CR>
 
 " quickly install bundle plugin
 nnoremap <leader>p :PluginInstall<CR>
