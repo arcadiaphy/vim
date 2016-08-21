@@ -161,7 +161,7 @@ hr {
     height: 4px;
     padding: 0;
     margin: 16px 0;
-    background-color: #e7e7e7;
+    background-color: rgba(0,0,0,0.04);
     border: 0 none;
     overflow: hidden;
     box-sizing: content-box;
@@ -237,7 +237,7 @@ table tr {
     padding: 0;
 }
 table tr:nth-child(2n) {
-    background-color: #f8f8f8;
+    background-color: rgba(0,0,0,0.04);
 }
 table tr th {
     font-weight: bold;
@@ -268,7 +268,7 @@ table tr td:last-child {
 .md-fences,
 code,
 tt {
-    background-color: rgba(0,0,0,0.04);
+    background-color: none;
     border-radius: 3px;
     padding: 0;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif !important;
@@ -316,13 +316,13 @@ tt {
 }
 
 .md-fences {
-	background-color: #f8f8f8;
+	background-color: rgba(0,0,0,0.04);
 }
 #write pre.md-meta-block {
 	padding: 1rem;
     font-size: 85%;
     line-height: 1.45;
-    background-color: #f7f7f7;
+    background-color: rgba(0,0,0,0.04);
     border: 0;
     border-radius: 3px;
     color: #777777;
@@ -351,7 +351,7 @@ tt {
 }
 .md-image>.md-meta {
     border: 1px solid #ddd;
-    background-color: #f8f8f8;
+    background-color: rgba(0,0,0,0.04);
     border-radius: 3px;
     font-family: Consolas, "Liberation Mono", Courier, monospace;
     padding: 2px 4px 0px 4px;
@@ -370,7 +370,7 @@ tt {
 
 #typora-quick-open {
     border: 1px solid #ddd;
-    background-color: #f8f8f8;
+    background-color: rgba(0,0,0,0.04);
 }
 
 #typora-quick-open-item {
