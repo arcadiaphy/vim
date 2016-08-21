@@ -268,7 +268,7 @@ table tr td:last-child {
 .md-fences,
 code,
 tt {
-    background-color: none;
+    background-color: #f7f7f7;
     border-radius: 3px;
     padding: 0;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif !important;
@@ -316,13 +316,13 @@ tt {
 }
 
 .md-fences {
-	background-color: rgba(0,0,0,0.04);
+	background-color: #f7f7f7;
 }
 #write pre.md-meta-block {
 	padding: 1rem;
     font-size: 85%;
     line-height: 1.45;
-    background-color: rgba(0,0,0,0.04);
+    background-color: #f7f7f7;
     border: 0;
     border-radius: 3px;
     color: #777777;

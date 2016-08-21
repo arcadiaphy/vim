@@ -15,7 +15,7 @@
  * Dual licensed under the MIT and GPL licenses.
  */
 .syntaxhighlighter {
-  background-color: rgba(0,0,0,0.04) !important;
+  background-color: #f7f7f7 !important;
   padding: 10px !important;
   box-sizing: border-box !important;
   border-radius: 3px !important;
