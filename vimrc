@@ -187,3 +187,4 @@ set smartindent
 set number
 set clipboard=unnamed
 set mouse=a
+set textwidth=0
