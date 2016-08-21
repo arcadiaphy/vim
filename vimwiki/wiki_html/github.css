@@ -38,13 +38,13 @@
 html {
     font-size: 16px;
     margin: auto;
-    width: 800px;
+    width: 900px;
     box-sizing: border-box;
 }
 
 body {
   font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -86,7 +86,7 @@ a.anchor {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 20px 0 10px;
+  margin: 16px 0 16px;
   padding: 0;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
@@ -128,39 +128,41 @@ h6 tt, h6 code {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 38px;
+  border-bottom: 1px solid #eee;
   color: black;
 }
 
 h2 {
-  font-size: 24px;
-  border-bottom: 1px solid #cccccc;
+  font-size: 26px;
+  border-bottom: 1px solid #eee;
   color: black;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h5 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 h6 {
   color: #777777;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 p, blockquote, ul, ol, dl, li, table, pre {
-  margin: 15px 0;
+  margin-top: 0;
 }
 
 hr {
-  background: transparent url("http://tinyurl.com/bq5kskr") repeat-x 0 0;
+  background: #e7e7e7;
+  margin: 24px 0;
   border: 0 none;
   color: #cccccc;
   height: 4px;
@@ -217,7 +219,7 @@ dl {
 }
 
 dl dt {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   font-style: italic;
   padding: 0;
@@ -253,6 +255,10 @@ blockquote {
   border-left: 4px solid #dddddd;
   padding: 0 15px;
   color: #777777;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 blockquote > :first-child {
@@ -265,9 +271,11 @@ blockquote > :last-child {
 
 table {
   padding: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 table tr {
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ddd;
   background-color: white;
   margin: 0;
   padding: 0;
@@ -279,14 +287,14 @@ table tr:nth-child(2n) {
 
 table tr th {
   font-weight: bold;
-  border: 1px solid #cccccc;
-  text-align: left;
+  border: 1px solid #ddd;
+  text-align: center;
   margin: 0;
   padding: 6px 13px;
 }
 
 table tr td {
-  border: 1px solid #cccccc;
+  border: 1px solid #ddd;
   text-align: left;
   margin: 0;
   padding: 6px 13px;
@@ -399,7 +407,7 @@ code, tt {
   background-color: rgba(0,0,0,0.04);
   border-radius: 3px;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  font-size: 14px;
+  font-size: 85%;
 }
 
 pre code {
@@ -408,6 +416,7 @@ pre code {
   white-space: pre;
   border: none;
   background: transparent;
+  font-size: 100%;
 }
 
 .highlight pre {
