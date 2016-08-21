@@ -164,6 +164,11 @@ nnoremap <leader>va :let @/=""<CR>:w<CR>:source ~/.vimrc<CR>
 " quickly install bundle plugin
 nnoremap <leader>p :PluginInstall<CR>
 
+" render markdown, pandoc required
+nnoremap <leader>r :redraw!<CR>
+nmap <leader>mh :w<CR>:execute "silent !pandoc -c github.css --indented-code-classes='md-fences' ".expand("%")." -o ~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"<CR><leader>r:echo "Write file to ~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"<CR>
+nmap <leader>mb <leader>mh:execute "silent !open ~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"<CR><leader>r
+
 syntax on
 set backspace=2
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
