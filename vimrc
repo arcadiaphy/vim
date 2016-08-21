@@ -138,6 +138,7 @@ set listchars=tab:▸\ ,eol:¬
 
 " tab width
 autocmd FileType cpp set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType css set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 " preserve state function
 function! Preserve(command)
