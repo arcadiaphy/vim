@@ -161,6 +161,9 @@ nnoremap <leader>a ggVG
 nnoremap <leader>ve :edit ~/.vim/vimrc<CR>
 nnoremap <leader>va :let @/=""<CR>:w<CR>:source %<CR>
 
+" quickly install bundle plugin
+nnoremap <leader>p :PluginInstall<CR>
+
 syntax on
 set backspace=2
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
