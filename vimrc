@@ -166,9 +166,13 @@ nnoremap <leader>va :let @/=""<CR>:w<CR>:source ~/.vimrc<CR>
 nnoremap <leader>p :PluginInstall<CR>
 
 " render markdown, pandoc required
+function! MdPath()
+    return "~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"
+endfunction
 nnoremap <leader>r :redraw!<CR>
-nmap <leader>mh :w<CR>:execute "silent !pandoc -c github.css ".expand("%")." -o ~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"<CR><leader>r:echo "Write file to ~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"<CR>
-nmap <leader>mb <leader>mh:execute "silent !open ~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"<CR><leader>r
+nmap <leader>mh :w<CR>:execute "silent !pandoc -c github.css ".expand("%")." -o ".MdPath()<CR><leader>r:echo "Write file to ".MdPath()<CR>
+nmap <leader>mb <leader>mh:execute "silent !open ".MdPath()<CR><leader>r
+nmap <leader>mr :execute "silent !rm ".MdPath()<CR><leader>r:echo "Remove file ".MdPath()<CR>
 
 " manage git
 nnoremap <leader>gs :Gstatus<CR>
