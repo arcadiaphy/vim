@@ -170,6 +170,16 @@ nnoremap <leader>r :redraw!<CR>
 nmap <leader>mh :w<CR>:execute "silent !pandoc -c github.css ".expand("%")." -o ~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"<CR><leader>r:echo "Write file to ~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"<CR>
 nmap <leader>mb <leader>mh:execute "silent !open ~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"<CR><leader>r
 
+" manage git
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gf :Git push --force<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gw :Gwrite<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nmap <leader>gb <leader>gs:Gbrowse<CR>ZZ
+
 syntax on
 set backspace=2
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
