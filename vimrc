@@ -20,6 +20,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
 Plugin 'vimwiki/vimwiki'
+Plugin 'nelstrom/vim-visual-star-search'
 call vundle#end()
 filetype plugin indent on
 
