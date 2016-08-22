@@ -180,11 +180,13 @@ endfunction
 function! MdEndSync()
     execute "silent !pkill -f browser-sync"
 endfunction
+function! MdRemove()
+    execute "silent !rm ".MdPath()
+endfunction
 nnoremap <leader>r :redraw!<CR>
-nmap <leader>mr :execute "silent !rm ".MdPath()<CR><leader>r:echo "Remove file ".MdPath()<CR>
 autocmd BufWinEnter *.md call MdRender() | call MdSync()
 autocmd BufWritePost *.md call MdRender()
-autocmd BufWinLeave *.md call MdEndSync()
+autocmd BufWinLeave *.md call MdEndSync() | call MdRemove()
 
 " manage git
 nnoremap <leader>gs :Gstatus<CR>
