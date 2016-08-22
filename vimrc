@@ -184,7 +184,7 @@ function! MdRemove()
     execute "silent !rm ".MdPath()
 endfunction
 nnoremap <leader>r :redraw!<CR>
-autocmd BufWinEnter *.md call MdRender() | call MdSync()
+autocmd BufWinEnter,BufNewFile *.md execute ":w" | call MdRender() | call MdSync()
 autocmd BufWritePost *.md call MdRender()
 autocmd BufWinLeave *.md call MdEndSync() | call MdRemove()
 
