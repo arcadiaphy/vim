@@ -19,3 +19,9 @@ Plugin [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) needs addition
 
     cd .vim/bundle/YouCompleteMe
     python install.py
+
+### Markdown
+Markdown file can be rendered and auto-refreshed on write, which relies on [pandoc](http://pandoc.org/) and [browser-sync](https://www.browsersync.io/):
+
+    brew install pandoc node.js
+    npm install -g browser-sync
