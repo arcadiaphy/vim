@@ -165,14 +165,26 @@ nnoremap <leader>va :let @/=""<CR>:w<CR>:source ~/.vimrc<CR>
 " quickly install bundle plugin
 nnoremap <leader>p :PluginInstall<CR>
 
-" render markdown, pandoc required
+" render markdown
+" prerequisites: pandoc
+"                npm install -g browser-sync
 function! MdPath()
     return "~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"
 endfunction
+function! MdRender()
+    execute "silent !pandoc -c github.css ".expand("%")." -o ".MdPath()
+endfunction
+function! MdSync()
+    execute "silent !~/.vim/vimwiki/wiki_html/browser-sync.sh ".MdPath()
+endfunction
+function! MdEndSync()
+    execute "silent !pkill -f browser-sync"
+endfunction
 nnoremap <leader>r :redraw!<CR>
-nmap <leader>mh :w<CR>:execute "silent !pandoc -c github.css ".expand("%")." -o ".MdPath()<CR><leader>r:echo "Write file to ".MdPath()<CR>
-nmap <leader>mb <leader>mh:execute "silent !open ".MdPath()<CR><leader>r
 nmap <leader>mr :execute "silent !rm ".MdPath()<CR><leader>r:echo "Remove file ".MdPath()<CR>
+autocmd BufWinEnter *.md call MdRender() | call MdSync()
+autocmd BufWritePost *.md call MdRender()
+autocmd BufWinLeave *.md call MdEndSync()
 
 " manage git
 nnoremap <leader>gs :Gstatus<CR>
