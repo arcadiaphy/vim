@@ -21,6 +21,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
 Plugin 'vimwiki/vimwiki'
 Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'tpope/vim-repeat'
 call vundle#end()
 filetype plugin indent on
 
