@@ -200,6 +200,9 @@ nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nmap <leader>gb <leader>gs:Gbrowse<CR>ZZ
 
+" show time when coding
+nmap <silent> <leader>t :echo substitute(system('date +%T'),'\n','','')<CR>
+
 syntax on
 set backspace=2
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
