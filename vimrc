@@ -154,7 +154,7 @@ function! Preserve(command)
     let @/=_s
     call cursor(l, c)
 endfunction
-nnoremap <leader>t :call Preserve("%s/\\s\\+$//e")<CR>
+nnoremap <leader>rt :call Preserve("%s/\\s\\+$//e")<CR>
 nnoremap <leader>= :call Preserve("normal gg=G")<CR>
 
 " select all
