@@ -22,6 +22,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vimwiki/vimwiki'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'tpope/vim-repeat'
+Plugin 'CodeFalling/fcitx-vim-osx'
 call vundle#end()
 filetype plugin indent on
 
@@ -202,6 +203,10 @@ nmap <leader>gb <leader>gs:Gbrowse<CR>ZZ
 
 " show time when coding
 nmap <silent> <leader>t :echo substitute(system('date +%T'),'\n','','')<CR>
+
+" easty to input chinese
+" require: fcitx-remote-for-osx
+imap <C-c> <ESC>
 
 syntax on
 set backspace=2

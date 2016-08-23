@@ -55,3 +55,6 @@
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat
+[submodule "bundle/fcitx-vim-osx"]
+	path = bundle/fcitx-vim-osx
+	url = https://github.com/CodeFalling/fcitx-vim-osx
