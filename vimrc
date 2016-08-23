@@ -134,6 +134,7 @@ let wiki.template_default = 'default'
 let wiki.css_name = 'github.css'
 let g:vimwiki_list = [wiki]
 nnoremap <leader>wc :VimwikiAll2HTML<CR>
+nnoremap <leader>wf :VimwikiTable<CR>
 
 " show invisible character
 nnoremap <silent> <leader>l :set list!<CR>
