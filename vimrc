@@ -170,19 +170,19 @@ nnoremap <leader>va :let @/=""<CR>:w<CR>:source ~/.vimrc<CR>
 nnoremap <leader>p :PluginInstall<CR>
 
 " render markdown
-" prerequisites: pandoc
+" prerequisites: brew install pandoc node.js
 "                npm install -g browser-sync
 function! MdPath()
-    return "~/.vim/vimwiki/wiki_html/".expand("%:t:r").".html"
+    return "~/.vim/vimwiki/wiki_html/".expand("<afile>:t:r").".html"
 endfunction
 function! MdRender()
-    execute "silent !pandoc -c github.css ".expand("%")." -o ".MdPath()
+    execute "silent !pandoc -c github.css ".expand("<afile>")." -o ".MdPath()
 endfunction
 function! MdSync()
-    execute "silent !~/.vim/vimwiki/wiki_html/browser-sync.sh ".MdPath()
+    execute "silent !~/.vim/vimwiki/wiki_html/browser-sync.sh ".MdPath()." start"
 endfunction
 function! MdEndSync()
-    execute "silent !pkill -f browser-sync"
+    execute "silent !~/.vim/vimwiki/wiki_html/browser-sync.sh ".MdPath()." stop"
 endfunction
 function! MdRemove()
     execute "silent !rm ".MdPath()
