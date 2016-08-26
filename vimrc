@@ -115,7 +115,9 @@ map <F5> :NERDTreeToggle<CR>
 
 " for hive script
 filetype plugin on
-autocmd BufNewFile,BufRead *.hive set filetype=hive
+autocmd BufNewFile,BufRead *.hive set filetype=sql | set filetype=hive
+let g:sh_no_error = 1
+let g:ftplugin_sql_omni_key = '<C-x>'
 
 " ultisnippets
 let g:UltiSnipsEditSplit   = 'vertical'
@@ -143,6 +145,8 @@ set listchars=tab:▸\ ,eol:¬
 " tab width
 autocmd FileType cpp set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType css set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType hive set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType sql set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 " preserve state function
 function! Preserve(command)
