@@ -57,6 +57,7 @@ set t_Co=256
 
 " ycm
 let g:ycm_register_as_syntastic_checker = 0
+let g:ycm_filetype_specific_completion_to_disable = {"python": 1}
 
 " syntastics
 " for python flake8 should be installed: pip install flake8
