@@ -222,3 +222,4 @@ set number
 set clipboard=unnamed
 set mouse=a
 set textwidth=0
+set completeopt=menu
