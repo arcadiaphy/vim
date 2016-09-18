@@ -58,3 +58,6 @@
 [submodule "bundle/fcitx-vim-osx"]
 	path = bundle/fcitx-vim-osx
 	url = https://github.com/CodeFalling/fcitx-vim-osx
+[submodule "bundle/asyncrun.vim"]
+	path = bundle/asyncrun.vim
+	url = https://github.com/skywind3000/asyncrun.vim

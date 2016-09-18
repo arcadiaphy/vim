@@ -1,9 +1,9 @@
 How to Use
 -------------------------------------------------
 ### Prerequisites
-Vim74 compiled with python support:
+Vim80 compiled with python support:
 
-    cd vim74/src/
+    cd vim/src/
     ./configure --enable-pythoninterp
     make
     make install

@@ -23,6 +23,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'tpope/vim-repeat'
 Plugin 'CodeFalling/fcitx-vim-osx'
+Plugin 'skywind3000/asyncrun.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -213,6 +214,12 @@ nmap <silent> <leader>t :echo substitute(system('date +%T'),'\n','','')<CR>
 " easty to input chinese
 " require: fcitx-remote-for-osx
 imap <C-c> <ESC>
+
+" async run
+nnoremap <leader>mb :AsyncRun make -j4<CR>
+nnoremap <leader>mc :AsyncStop<CR>
+nnoremap <leader>mo :copen 4<CR>
+nnoremap <leader>mr :AsyncRun 
 
 syntax on
 set backspace=2
