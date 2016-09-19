@@ -68,6 +68,7 @@ let g:syntastic_enable_signs              = 1
 let g:syntastic_auto_loc_list             = 1
 let g:syntastic_loc_list_height           = 4
 let g:syntastic_cpp_remove_include_errors = 1
+let g:syntastic_python_flake8_args='--ignore=E501,E302,E251,E221'
 
 " doxygentoolkit
 let g:DoxygenToolkit_fileTag      = "@file "
