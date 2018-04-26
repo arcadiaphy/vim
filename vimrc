@@ -40,7 +40,8 @@ nnoremap <silent> <leader>i :nohl<CR>
 " set ctags
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <C-w>\ :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-map <f12> :!ctags -R .<CR>
+map <F10> :!gotags -R . > ./tags <CR>
+map <F12> :!ctags -R .<CR>
 
 " reformat file
 map <F7> mzgg=G`z<CR>
@@ -62,13 +63,14 @@ let g:ycm_filetype_specific_completion_to_disable = {"python": 1}
 
 " syntastics
 " for python flake8 should be installed: pip install flake8
-let g:syntastic_cpp_compiler              = "g++"
+let g:syntastic_cpp_compiler              = "g++ -std=c++11"
 let g:syntastic_check_on_w                = 1
 let g:syntastic_enable_signs              = 1
 let g:syntastic_auto_loc_list             = 1
 let g:syntastic_loc_list_height           = 4
 let g:syntastic_cpp_remove_include_errors = 1
-let g:syntastic_python_flake8_args='--ignore=E501,E302,E251,E221'
+let g:syntastic_python_flake8_args='--ignore=E501,E302,E251,E221,E402,E266,E226'
+let g:syntastic_mode_map = { 'passive_filetypes': ['java']  }
 
 " doxygentoolkit
 let g:DoxygenToolkit_fileTag      = "@file "
@@ -105,7 +107,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 set pastetoggle=<C-y>
 
 " git
-let g:fugitive_gitlab_domains = ['https://git.xiaojukeji.com']
+let g:fugitive_gitlab_domains = ['https://git.elenet.me']
 
 " easy align
 " start interactive EasyAlign in visual mode (e.g. vipga)
@@ -171,7 +173,7 @@ nnoremap <leader>a ggVG
 
 " quickly edit and apply vimrc
 nnoremap <leader>ve :edit ~/.vim/vimrc<CR>
-nnoremap <leader>va :let @/=""<CR>:w<CR>:source ~/.vimrc<CR>
+nnoremap <leader>va :let @/=""<CR>:w<CR>:source ~/.vim/vimrc<CR>
 
 " quickly install bundle plugin
 nnoremap <leader>p :PluginInstall<CR>
@@ -227,7 +229,7 @@ set backspace=2
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set smartindent
 set number
-set clipboard=unnamed
 set mouse=a
 set textwidth=0
 set completeopt=menu
+set clipboard+=unnamed
