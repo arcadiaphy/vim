@@ -184,7 +184,7 @@ function! MdPath()
     return "~/.vim/vimwiki/wiki_html/".expand("<afile>:t:r").".html"
 endfunction
 function! MdRender()
-    execute "silent !pandoc -c github.css ".expand("<afile>")." -o ".MdPath()
+    execute "silent !pandoc --standalone -c github.css ".expand("<afile>")." -o ".MdPath()" >& /dev/null"
 endfunction
 function! MdSync()
     execute "silent !~/.vim/vimwiki/wiki_html/browser-sync.sh ".MdPath()." start"
