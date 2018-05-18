@@ -25,8 +25,3 @@ Markdown file can be rendered and auto-refreshed on write, which relies on [pand
 
     brew install pandoc node.js
     npm install -g browser-sync
-
-### Seamless Chinese Input
-Avoid interruption from input method when inputting Chinese. Follow [fcitx-remote-for-osx](https://github.com/CodeFalling/fcitx-remote-for-osx) to configure.
-
-    brew install fcitx-remote-for-osx
