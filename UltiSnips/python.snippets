@@ -1,0 +1,10 @@
+snippet pdb
+import ipdb
+ipdb.set_trace()
+endsnippet
+
+snippet hook
+import sys
+from IPython.core import ultratb
+sys.excepthook = ultratb.FormattedTB(mode='Plain', color_scheme='Linux', call_pdb=1)
+endsnippet
