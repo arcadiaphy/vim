@@ -6,7 +6,7 @@
 	url = https://github.com/kien/ctrlp.vim
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
