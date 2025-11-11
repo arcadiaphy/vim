@@ -68,8 +68,9 @@ let g:syntastic_enable_signs              = 1
 let g:syntastic_auto_loc_list             = 1
 let g:syntastic_loc_list_height           = 4
 let g:syntastic_cpp_remove_include_errors = 1
-let g:syntastic_python_flake8_args='--ignore=E501,E302,E251,E221,E402,E266,E226'
-let g:syntastic_mode_map = { 'passive_filetypes': ['java']  }
+let g:syntastic_python_checkers           = ['flake8']
+let g:syntastic_python_flake8_args        = '--ignore=E501,E302,E251,E221,E402,E266,E226,E305,E502,E722,W504'
+let g:syntastic_mode_map                  = { 'passive_filetypes': ['java']  }
 
 " doxygentoolkit
 let g:DoxygenToolkit_fileTag      = "@file "
@@ -101,9 +102,6 @@ au TabLeave * let g:lasttab = tabpagenr()
 let g:UltiSnipsExpandTrigger       = "<c-l>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
-
-" paste without indentation
-set pastetoggle=<C-y>
 
 " git
 let g:fugitive_gitlab_domains = ['https://git.elenet.me']
